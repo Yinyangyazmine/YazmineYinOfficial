@@ -1707,3 +1707,68 @@ body {
     .read-more:hover {
       text-decoration: underline;
     }
+
+    /* Global Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .navmenu ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Add spacing between items */
+  }
+
+  .navmenu li {
+    margin: 0 auto; /* Center navigation items */
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .product-list, .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust columns */
+  }
+
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .left-side, .right-side {
+    width: 100%; /* Full width on mobile */
+    padding: 0; /* Remove padding */
+  }
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Modal Responsiveness */
+.modal-content {
+  width: 90%; /* Use 90% of the screen width */
+  max-width: 400px; /* Limit the width on larger screens */
+}
+/* Adjust Slider for Smaller Screens */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 80%; /* Reduce size of slides */
+  }
+}
+
+    
