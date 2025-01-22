@@ -1791,6 +1791,8 @@ body {
     box-sizing: border-box;
 }
 
+/*MOBILE THINGY*/
+
 /* Global Box Sizing */
 * {
   box-sizing: border-box;
@@ -1804,12 +1806,12 @@ body {
   line-height: 1.6;
 }
 
-/* Responsive Navigation */
+/* Navigation */
 .navmenu ul {
   display: flex;
   list-style: none;
-  gap: 20px; /* Default gap for larger screens */
   justify-content: center;
+  gap: 20px; /* Default gap */
   padding: 10px;
 }
 
@@ -1819,53 +1821,65 @@ body {
 
 @media (max-width: 768px) {
   .navmenu ul {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    gap: 10px; /* Add spacing between items */
+    flex-direction: column;
+    gap: 10px;
   }
-
   .navmenu li {
-    margin: 0 auto; /* Center navigation items */
+    text-align: center;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navmenu ul {
-    gap: 15px; /* Adjust gap for tablet screens */
-  }
-}
-
-/* Responsive Grid */
+/* Grid Containers */
 .product-list, .projects-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Default grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default grid */
 }
 
 @media (max-width: 768px) {
   .product-list, .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust columns for mobile */
-  }
-
-  .container {
-    flex-direction: column; /* Stack sections vertically */
-    padding: 10px; /* Reduce padding */
-  }
-
-  .left-side, .right-side {
-    width: 100%; /* Full width on mobile */
-    padding: 0; /* Remove padding */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .product-list, .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust for tablet screens */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Responsive Container Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-side, .right-side {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    gap: 15px;
   }
 }
 
 /* Responsive Text */
 h1 {
-  font-size: 32px; /* Default size for larger screens */
+  font-size: 36px; /* Desktop default */
 }
 
 h2 {
@@ -1880,11 +1894,9 @@ p {
   h1 {
     font-size: 24px;
   }
-
   h2 {
     font-size: 20px;
   }
-
   p {
     font-size: 16px;
   }
@@ -1894,36 +1906,34 @@ p {
   h1 {
     font-size: 28px;
   }
-
   h2 {
     font-size: 24px;
   }
-
   p {
     font-size: 17px;
   }
 }
 
-/* Modal Responsiveness */
+/* Modal */
 .modal-content {
-  width: 90%; /* Use 90% of the screen width */
-  max-width: 400px; /* Limit the width on larger screens */
-  margin: 0 auto; /* Center the modal */
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Adjust Slider for Smaller Screens */
+/* Slider */
 .swiper-slide {
-  width: 100%; /* Default size */
+  width: 100%; /* Default */
 }
 
 @media (max-width: 768px) {
   .swiper-slide {
-    width: 80%; /* Reduce size of slides */
+    width: 80%;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .swiper-slide {
-    width: 90%; /* Adjust size for tablet screens */
+    width: 90%;
   }
 }
