@@ -1854,22 +1854,39 @@ body {
 
 /*MOBILE*/
 
+/* Mobile-Friendly Updates */
+
+/* Ensure links are easily tappable */
+a {
+  padding: 10px; /* Add tappable area */
+  display: inline-block; /* Ensure block-level interaction */
+  font-size: 16px; /* Legible size */
+}
+
+a:hover {
+  color: var(--accent-color); /* Keep hover effects visible */
+}
+
+/* Navigation Bar Updates for Mobile */
 @media (max-width: 768px) {
   .navmenu ul {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack menu items */
+    gap: 15px; /* Add spacing between items */
   }
 
   .navmenu li {
     text-align: center;
+    margin: 10px 0; /* Add separation */
   }
 
   .mobile-nav-toggle {
-    display: block; /* Ensure toggle button appears */
+    display: block; /* Ensure the toggle is visible */
+    font-size: 28px;
+    padding: 10px; /* Make it easy to tap */
   }
 
   .navmenu {
-    display: none; /* Default hidden for mobile */
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
@@ -1878,32 +1895,30 @@ body {
     background-color: var(--nav-mobile-background-color);
     z-index: 1000;
     overflow-y: auto;
-    transition: transform 0.3s ease;
+    padding: 20px; /* Add padding for comfortable access */
   }
 
   .mobile-nav-active .navmenu {
-    display: block;
-    transform: translateX(0);
+    display: block; /* Show on toggle */
   }
 }
 
+/* Responsive Images */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 50%; /* Scale down for smaller screens */
+  height: auto; /* Maintain aspect ratio */
   display: block;
 }
 
-@media (max-width: 768px) {
-  .gallery-item img, .hero img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
+.gallery-item img, .hero img {
+  max-width: 50%; /* Slightly smaller for focus */
+  margin: 10px auto; /* Center images */
 }
 
+/* Text and Interactive Element Sizes */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Adjust as needed */
+    font-size: 16px; /* Increase for readability */
     line-height: 1.5;
   }
 
@@ -1917,32 +1932,26 @@ img {
     line-height: 1.3;
   }
 
-  p {
+  a {
+    font-size: 18px;
+    padding: 12px; /* Ensure accessible tap area */
+  }
+
+  button {
     font-size: 16px;
-    margin-bottom: 16px;
+    padding: 12px 20px; /* Add larger tappable area */
   }
 }
 
+/* Optimize Layouts for Mobile */
 @media (max-width: 768px) {
   .container, .section {
-    padding: 10px;
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 
   .content, .main-content, .sidebar {
-    width: 100%;
+    width: 100%; /* Full width */
     padding: 0;
     margin: 0;
   }
-}
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: var(--background-color);
-}
-
-.centered-content {
-  text-align: center;
-  padding: 10px;
 }
