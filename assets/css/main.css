@@ -1851,3 +1851,127 @@ body {
     min-height: 100vh; /* Ensure it fills the viewport */
     box-sizing: border-box;
 }
+
+/* Mobile-Friendly Updates */
+
+/* Ensure links are easily tappable */
+a {
+  padding: 10px; /* Add tappable area */
+  display: inline-block; /* Ensure block-level interaction */
+  font-size: 16px; /* Legible size */
+}
+
+a:hover {
+  color: var(--accent-color); /* Keep hover effects visible */
+}
+
+/* Navigation Bar Updates for Mobile */
+@media (max-width: 768px) {
+  .navmenu ul {
+    flex-direction: column; /* Stack menu items */
+    gap: 15px; /* Add spacing between items */
+  }
+
+  .navmenu li {
+    text-align: center;
+    margin: 10px 0; /* Add separation */
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Ensure the toggle is visible */
+    font-size: 28px;
+    padding: 10px; /* Make it easy to tap */
+    cursor: pointer;
+  }
+
+  .navmenu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--nav-mobile-background-color);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px; /* Add padding for comfortable access */
+  }
+
+  .mobile-nav-active .navmenu {
+    display: flex; /* Use flex for proper layout */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Toggle button for the navigation bar */
+.mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+/* Ensure navmenu visibility on mobile */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%; /* Scale down for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.gallery-item img, .hero img {
+  max-width: 90%; /* Slightly smaller for focus */
+  margin: 10px auto; /* Center images */
+}
+
+/* Text and Interactive Element Sizes */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Increase for readability */
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  a {
+    font-size: 18px;
+    padding: 12px; /* Ensure accessible tap area */
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 20px; /* Add larger tappable area */
+  }
+}
+
+/* Optimize Layouts for Mobile */
+@media (max-width: 768px) {
+  .container, .section {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .content, .main-content, .sidebar {
+    width: 100%; /* Full width */
+    padding: 0;
+    margin: 0;
+  }
+}
