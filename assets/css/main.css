@@ -1855,30 +1855,24 @@ body {
 
 /*BANNER*/
 
-.banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
+ /* Banner Style */
+    .banner {
+      background-color: #f7f7f7;
+      color: #333;
+      font-size: 18px;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #ccc;
+      margin-top: 20px;
+    }
 
-.banner .close-btn {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
+    /* Responsive for smaller devices */
+    @media (max-width: 600px) {
+      .banner {
+        font-size: 16px;
+      }
 
-.content {
-  margin-top: 60px; /* Adjust for banner height */
-  padding: 20px;
+      .gif-container img {
+        width: 100%;
+      }
+    }
