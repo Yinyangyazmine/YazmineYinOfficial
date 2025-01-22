@@ -26,30 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-  /* Banner Style */
-    .banner {
-      background-color: #f7f7f7;
-      color: #333;
-      font-size: 18px;
-      padding: 20px;
-      text-align: center;
-      border-top: 2px solid #ccc;
-      margin-top: 20px;
-    }
-
-    /* Responsive for smaller devices */
-    @media (max-width: 600px) {
-      .banner {
-        font-size: 16px;
-      }
-
-      .gif-container img {
-        width: 100%;
-      }
-    }
-  </style>
-
 
 
 </head>
@@ -104,16 +80,12 @@
     </div>
   </header>
 
-  <!-- Banner Section -->
-  <div class="banner">
-    Our mobile website is still in active development, our foxes are working hard to resolve any glitches present! Thank you for your patience.
+  <div class="banner" id="banner">
+    <p>Our mobile website is still in active development, our foxes are working hard to resolve any glitches present </p>
+    <button class="close-btn" onclick="closeBanner()">✖</button>
   </div>
-  <p></p>
-   <p></p>
-    <p></p>
-     <p></p>
-      <p></p>
-       <p></p>
+
+  <div class="content">
 
 
   <a href="aboutes.html" class="cta-btn">Traducir a español<br></a>
@@ -188,6 +160,13 @@
       </div>
           </div>
         </div>
+
+        <script>
+    function closeBanner() {
+      const banner = document.getElementById('banner');
+      banner.style.display = 'none';
+    }
+  </script>
 
   </main>
 
