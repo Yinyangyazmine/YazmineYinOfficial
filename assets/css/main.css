@@ -1854,6 +1854,8 @@ body {
 
 /* Mobile-Friendly Updates */
 
+//* Mobile-Friendly Updates */
+
 /* Ensure links are easily tappable */
 a {
   padding: 10px; /* Add tappable area */
@@ -1865,62 +1867,42 @@ a:hover {
   color: var(--accent-color); /* Keep hover effects visible */
 }
 
-/* Navigation Bar Updates for Mobile */
-@media (max-width: 768px) {
-  .navmenu ul {
-    flex-direction: column; /* Stack menu items */
-    gap: 15px; /* Add spacing between items */
-  }
-
-  .navmenu li {
-    text-align: center;
-    margin: 10px 0; /* Add separation */
-  }
-
-  .mobile-nav-toggle {
-    display: block; /* Ensure the toggle is visible */
-    font-size: 28px;
-    padding: 10px; /* Make it easy to tap */
-    cursor: pointer;
-  }
-
-  .navmenu {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--nav-mobile-background-color);
-    z-index: 1000;
-    overflow-y: auto;
-    padding: 20px; /* Add padding for comfortable access */
-  }
-
-  .mobile-nav-active .navmenu {
-    display: flex; /* Use flex for proper layout */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+/* Navigation Bar Always Visible */
+.navmenu {
+  display: flex; /* Ensure it is always visible */
+  flex-direction: row; /* Horizontal alignment */
+  justify-content: space-around; /* Even spacing between items */
+  align-items: center; /* Center items vertically */
+  background-color: var(--nav-mobile-background-color); /* Consistent background color */
+  position: sticky; /* Ensure it stays on top */
+  top: 0;
+  z-index: 1000;
+  padding: 10px 20px; /* Add padding for better spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for distinction */
 }
 
-/* Toggle button for the navigation bar */
-.mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  z-index: 1001;
+.navmenu ul {
+  list-style: none;
+  display: flex; /* Horizontal layout */
+  gap: 15px; /* Add spacing between items */
+  margin: 0;
+  padding: 0;
 }
 
-/* Ensure navmenu visibility on mobile */
-body.mobile-nav-active {
-  overflow: hidden;
+.navmenu li {
+  text-align: center;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: var(--nav-color);
+  font-size: 18px;
+  padding: 10px 15px; /* Make it easy to tap */
+  transition: color 0.3s ease;
+}
+
+.navmenu a:hover {
+  color: var(--nav-hover-color);
 }
 
 /* Responsive Images */
@@ -1973,5 +1955,6 @@ img {
     width: 100%; /* Full width */
     padding: 0;
     margin: 0;
+  
   }
 }
