@@ -1883,6 +1883,7 @@ a:hover {
     display: block; /* Ensure the toggle is visible */
     font-size: 28px;
     padding: 10px; /* Make it easy to tap */
+    cursor: pointer;
   }
 
   .navmenu {
@@ -1899,19 +1900,40 @@ a:hover {
   }
 
   .mobile-nav-active .navmenu {
-    display: block; /* Show on toggle */
+    display: flex; /* Use flex for proper layout */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+/* Toggle button for the navigation bar */
+.mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+/* Ensure navmenu visibility on mobile */
+body.mobile-nav-active {
+  overflow: hidden;
 }
 
 /* Responsive Images */
 img {
-  max-width: 50%; /* Scale down for smaller screens */
+  max-width: 100%; /* Scale down for smaller screens */
   height: auto; /* Maintain aspect ratio */
   display: block;
 }
 
 .gallery-item img, .hero img {
-  max-width: 50%; /* Slightly smaller for focus */
+  max-width: 90%; /* Slightly smaller for focus */
   margin: 10px auto; /* Center images */
 }
 
