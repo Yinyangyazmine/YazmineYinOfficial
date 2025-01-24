@@ -80,6 +80,13 @@
     </div>
   </header>
 
+   <div class="banner" id="banner">
+    <p>Our mobile website is still in active development, our foxes are working hard to resolve any glitches present </p>
+    <button class="close-btn" onclick="closeBanner()">✖</button>
+  </div>
+
+  <div class="content">
+
 <body>
 
       <a href="indexes.html" class="cta-btn">Traducir al español<br></a>
@@ -147,6 +154,12 @@
   </div>
 
 </body>
+<script>
+    function closeBanner() {
+      const banner = document.getElementById('banner');
+      banner.style.display = 'none';
+    }
+  </script>
 
 <footer id="footer" class="footer">
 
@@ -180,6 +193,6 @@
 
 </body>
 
-<--Shiva was here-->>
+<!--Shiva was here-->
 
 </html>

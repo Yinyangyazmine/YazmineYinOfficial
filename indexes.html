@@ -81,6 +81,14 @@
     </div>
   </header>
 
+   <div class="banner" id="banner">
+    <p>Nuestro sitio web móvil todavía está en desarrollo activo, nuestros zorros están trabajando arduamente para resolver cualquier problema técnico presente.
+</p>
+    <button class="close-btn" onclick="closeBanner()">✖</button>
+  </div>
+
+  <div class="content">
+
 
   <main class="main">
     <a href="index.html" class="cta-btn">Translate to English<br></a>
@@ -150,6 +158,13 @@
   </div>
 
 </body>
+
+ <script>
+    function closeBanner() {
+      const banner = document.getElementById('banner');
+      banner.style.display = 'none';
+    }
+  </script>
 
 </main>
 
